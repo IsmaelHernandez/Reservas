@@ -29,18 +29,33 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed text-uppercase" href="mis_pagos" data-toggle="collapse" data-target="#mis_pagos"
-            aria-expanded="true" aria-controls="mis_pagos">
+        <a class="nav-link collapsed text-uppercase" href="users" data-toggle="collapse" data-target="#users"
+            aria-expanded="true" aria-controls="users">
             <i class="fas fa-bars"></i>
             <span>Usuarios</span>
         </a>
-        <div id="mis_pagos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">usuarios</h6>
                 <a class="collapse-item" href="{{ route('users.index')}}">Usuarios</a>
             </div>
         </div>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed text-uppercase" href="posts" data-toggle="collapse" data-target="#posts"
+            aria-expanded="true" aria-controls="posts">
+            <i class="fas fa-bars"></i>
+            <span>Posts</span>
+        </a>
+        <div id="posts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">posts</h6>
+                <a class="collapse-item" href="{{ route('posts.index')}}">Posts</a>
+            </div>
+        </div>
+    </li>
+    
 
     <li class="nav-item">
         <a class="nav-link collapsed text-uppercase" href="new_pay" data-toggle="collapse" data-target="#new_pay"
@@ -77,21 +92,6 @@
 
     {{-- Si eres cliente no me muestres usuarios --}}
     {{-- @if(isset(Auth()->user()->id) && Auth::user()->hasRole('SuperAdministrador')) --}}
-    <li class="nav-item">
-
-        <a class="nav-link collapsed text-uppercase" href="users" data-toggle="collapse" data-target="#users"
-            aria-expanded="true" aria-controls="users">
-            <i class="fas fa-bars"></i>
-            <span>Usuarios</span>
-        </a>
-
-        <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Usuarios</h6>
-                <a class="collapse-item" href="">Usuarios</a>
-            </div>
-        </div>
-    </li>
     
     <li class="nav-item">
 
